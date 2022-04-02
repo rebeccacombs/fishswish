@@ -91,14 +91,9 @@ export default function App() {
         </Grid>
         <ProTip />
         <Box sx={{
-        width: 300,
-        height: 300,
-        backgroundColor: 'primary.dark',
-        '&:hover': {
-          backgroundColor: 'primary.main',
-          opacity: [0.9, 0.8, 0.7],
-        },
-      }}x/>
+        width: 100,
+        height: 100
+      }}/>
         <a id="narrative">
         <Typography variant="h6" component="h1" noWrap gutterBottom>
           Here is our current analysis: 
