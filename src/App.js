@@ -4,14 +4,15 @@ import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
 import Link from '@mui/material/Link';
 import ProTip from './components/ProTip';
-import BarChart from './components/BarChart';
+import BarChart from './BarChart';
+
 
 function Copyright() {
   return (
     <Typography variant="body2" color="text.secondary" align="center">
       {'Copyright © '}
       <Link color="inherit" href="https://mui.com/">
-        OoO
+        FishSwish
       </Link>{' '}
       {new Date().getFullYear()}.
     </Typography>
@@ -53,13 +54,14 @@ const data = [
 
 export default function App() {
   return (
-    <Container maxWidth="sm">
-      <Box sx={{ my: 4 }}>
-        <Typography variant="h2" component="h1" gutterBottom>
-          OoO DataFest 2022
+    <Container maxWidth="lg">
+      <Box sx={{ my: 6 }}>
+        <Typography variant="h2" component="h1" textAlign="center" gutterBottom>
+          Team FishSwish DataFest 2022
         </Typography>
+        <ProTip />
         <Typography variant="h6" component="h1" gutterBottom>
-          Here is our current analysis. 
+          Here is our current analysis: 
         </Typography>
         <BarChart data={data}/>
         <ProTip />

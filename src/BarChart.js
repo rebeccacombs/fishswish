@@ -1,4 +1,4 @@
-import { useD3 } from '/Users/rdc/GitHub/create-react-app-with-styled-components/src/hooks/useD3'
+import { useD3 } from './hooks/useD3'; 
 import React from 'react';
 import * as d3 from 'd3';
 
