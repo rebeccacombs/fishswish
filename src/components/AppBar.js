@@ -14,27 +14,19 @@ import MenuItem from '@mui/material/MenuItem';
 import Link from '@mui/material/Link'; 
 import SailingOutlinedIcon from '@mui/icons-material/SailingOutlined';
 
-const pages = ['Narrative', 'Elementary Findings', 'Novel Discoveries'];
-const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
+const pages = [<Link href='/#narrative' underline="none" color="inherit">Narrative</Link>, 'Elementary Findings', 'Novel Discoveries'];
 
 const ResponsiveAppBar = () => {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
-  const [anchorElUser, setAnchorElUser] = React.useState(null);
 
   const handleOpenNavMenu = (event) => {
     setAnchorElNav(event.currentTarget);
-  };
-  const handleOpenUserMenu = (event) => {
-    setAnchorElUser(event.currentTarget);
   };
 
   const handleCloseNavMenu = () => {
     setAnchorElNav(null);
   };
 
-  const handleCloseUserMenu = () => {
-    setAnchorElUser(null);
-  };
 
   return (
     <AppBar position="fixed">
@@ -86,14 +78,6 @@ const ResponsiveAppBar = () => {
               ))}
             </Menu>
           </Box>
-          <Typography
-            variant="h5"
-            noWrap
-            component="div"
-            sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}
-          >
-            LOGO
-          </Typography>
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
             {pages.map((page) => (
               <Button
