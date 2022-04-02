@@ -3,7 +3,9 @@ import Container from '@mui/material/Container';
 import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
 import Link from '@mui/material/Link';
+import Grid from '@mui/material/Grid';
 import ProTip from './components/ProTip';
+import AppBar from './components/AppBar';
 import BarChart from './BarChart';
 
 
@@ -12,7 +14,7 @@ function Copyright() {
     <Typography variant="body2" color="text.secondary" align="center">
       {'Copyright © '}
       <Link color="inherit" href="https://mui.com/">
-        FishSwish
+        FishSwish & Duke DataFest
       </Link>{' '}
       {new Date().getFullYear()}.
     </Typography>
@@ -54,18 +56,50 @@ const data = [
 
 export default function App() {
   return (
-    <Container maxWidth="lg">
+    <Container maxWidth="xl">
       <Box sx={{ my: 6 }}>
-        <Typography variant="h2" component="h1" textAlign="center" gutterBottom>
+        <AppBar />
+
+        <Container maxWidth="lg">
+          <Box sx={{ my: 6 }}>
+        <Typography variant="h3" component="h1" textAlign="center" gutterBottom>
           Team FishSwish DataFest 2022
         </Typography>
         <ProTip />
-        <Typography variant="h6" component="h1" gutterBottom>
+        <Typography variant="h3" component="h1" noWrap gutterBottom>
+          Introduction: 
+        </Typography>
+        <ProTip />
+        <Grid container spacing={2} columns={16}>
+        <Grid item xs={8}>
+        <Container>
+       <Typography variant="h5">Things to consider:</Typography> 
+       <Typography>1. Gender (avatar gender)</Typography>  
+        <Typography>2. Forgetting over time (highest means probably in weak 12)</Typography>
+        <Typography>3. Bar plots instead of scatterplots for the num_interactions analysis</Typography>
+        <Typography>4. Lasso in R</Typography>
+        </Container>
+         </Grid>
+         <Grid item xs={8}>
+         <Container>
+       <Typography variant="h5">Sections to cover:</Typography> 
+       <Typography>1. Intro (significance, general research question, data background)</Typography>  
+        <Typography>2. Methodology (explanation of steps in cleaning and the code) </Typography>
+        <Typography>3. Conclusion</Typography>
+        </Container>
+        </Grid>
+        </Grid>
+        <ProTip />
+        <ProTip />
+        <Typography variant="h6" component="h1" noWrap gutterBottom>
           Here is our current analysis: 
         </Typography>
         <BarChart data={data}/>
         <ProTip />
         <Copyright />
+          </Box>
+        </Container>
+
       </Box>
     </Container>
     
