@@ -1,2 +1,2 @@
-# fishswish
+# FishSwish
  Duke DataFest 2022
