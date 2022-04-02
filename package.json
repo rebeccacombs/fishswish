@@ -1,0 +1,39 @@
+{
+  "name": "fishswish",
+  "version": "5.0.0",
+  "private": true,
+  "dependencies": {
+    "@mui/lab": "latest",
+    "@mui/material": "latest",
+    "@mui/styled-engine-sc": "latest",
+    "@testing-library/jest-dom": "latest",
+    "@testing-library/react": "latest",
+    "@testing-library/user-event": "latest",
+    "d3": "^7.4.0",
+    "react": "latest",
+    "react-dom": "latest",
+    "react-scripts": "latest",
+    "styled-components": "latest"
+  },
+  "scripts": {
+    "start": "craco start",
+    "build": "craco build",
+    "test": "craco test",
+    "eject": "react-scripts eject"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "@craco/craco": "latest"
+  }
+}
