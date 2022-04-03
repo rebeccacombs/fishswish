@@ -71,7 +71,7 @@ export default function App() {
         <Container>
        <Typography sx={{fontWeight: 'bold', fontSize: 20}}>We made a scatterplot of total interactions vs mean score and added a line of best fit.</Typography>
        <Typography  sx={{ mt: 3, mb: 2 }} color="text.secondary"></Typography>
-       <Typography sx={{fontSize: 18}}>The line had a slight negative slope, suggesting that more engagement per session might lead to a mild decrease in score (and therefore decrease in susceptibility to drug-related peer pressure). Much of the data was clustered on the left half of the graph, however, and the slope was very slight, so this may not be of much significance. </Typography> 
+       <Typography sx={{fontSize: 18}}>The line had a slight negative slope, suggesting that more engagement per session might correlates with a decrease in score (and therefore decrease in susceptibility to drug-related peer pressure). Much of the data was clustered on the left half of the graph, however, and the slope was very slight, so this may not be of much significance. </Typography> 
        <Typography  sx={{ mt: 1, mb: 2 }} color="text.secondary"></Typography>
        <Typography sx={{fontSize: 18}}>This suggests that there was more variation among the scores of players who played much more or less than others, while players who engaged with the game at a medium amount tended to cluster around the same score. </Typography>
         </Container>
@@ -92,13 +92,28 @@ export default function App() {
          </Grid>
          <Grid item xs={7}>
          <Container sx={{ mt: 6, mb: 6 }}>
-         <Typography sx={{fontSize: 19}}>When we used an interaction effects model to account for the effects of player gender (under the assumption that the avatar gender selected by the player is an accurate reflection of their gender identity IRL), we found that the relationship between total number of ingame interactions and mean S5 score. </Typography>
+         <Typography sx={{fontSize: 19}}>When we used an interaction effects model to account for the effects of player gender (under the assumption that the avatar gender selected by the player is an accurate reflection of their gender identity IRL), we found that the relationship between total number of in-game interactions and mean S5 score. </Typography>
          <Box sx={{width: 10, height: 20}}/>
          <Box component="img" sx={{height: 100,width: 460}} src={Sheet}/>
          <Typography>Note that there is a large standard error, p-values are still too small to be significant under alpha = 0.05). </Typography>
         </Container>
         </Grid>
         </Grid>
+        <Box sx={{width: 80, height: 50}}/>
+        <Grid container spacing={2} columns={16}>
+        <Grid item xs={8}>
+        <Container>
+       <Typography  sx={{ mt: 1, mb: 2 }} color="text.secondary"></Typography>
+       <Typography sx={{fontSize: 18}}>We added the number of times a player made an aspirational choice to the data set and created another scatterplot with a line of best fit, which showed a slight positive correlation between making more choices and having a better score (or being less resistant to drug-related peer pressure).  </Typography>
+        </Container>
+         </Grid>
+         <Grid item xs={8}>
+         <Container>
+         <Iframe url="//plotly.com/~rebeccacombs/5.embed?height=500&link=false&logo=false&modebar=false" width="600" height="510"/>
+        </Container>
+        </Grid>
+        </Grid>
+
         <Box sx={{width: 80, height: 60}}/>
         <Typography align="center" sx={{fontSize: 20}}>Overall, this suggests that interacting with the game more, meaning with more interactions and more choices, correlates slightly with a higher score, indicating a higher likelihood of taking drugs. Given the structure of the game, which forces players to make poor choices and then asks them to go back and fix those choices, this finding makes sense; if it takes a player longer to correct his decisions, he may not entirely understand whether or why that is a bad decision and how to correct it. </Typography>
         <Box sx={{width: 80, height: 30}}/>
@@ -108,6 +123,7 @@ export default function App() {
         <Box sx={{width: 80, height: 10}}/>
         <Typography align="center" sx={{fontSize: 17}}><Link href="https://github.com/rebeccacombs/fishswish"><GitHubIcon sx={{ fontSize: 17 }}/>{'  Site Repository'}</Link></Typography>
         <Box sx={{width: 80, height: 40}}/>
+        
         <Copyright />
           </Box>
         </Container>
