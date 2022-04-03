@@ -44,11 +44,11 @@ export default function App() {
         
         <Box sx={{width: 80, height: 30}}/>
         </a>
-        <Typography sx={{fontSize: 18}}> Our data is collected from the <b>PlayForward: Elm City Stories</b> game, gathered from 166 participants across 6 weeks with participants playing the game for 60-75 mins twice weekly. The game was tested at 12 schools with primarily racial and ethnic minorities, 88 were boys, 78 were girls. 86 were 11-12 years old and 80 were 13-14. The data logs various in game interactions, including options chosen for minigames.</Typography>
+        <Typography sx={{fontSize: 19}}> Our data is collected from the <b>PlayForward: Elm City Stories</b> game, gathered from 166 participants across 6 weeks with participants playing the game for 60-75 mins twice weekly. The game was tested at 12 schools with primarily racial and ethnic minorities, 88 were boys, 78 were girls. 86 were 11-12 years old and 80 were 13-14. The data logs various in game interactions, including options chosen for minigames.</Typography>
         <Box sx={{width: 80, height: 30}}/>
-        <Typography sx={{fontSize: 18}}>We also received data from an <b>S5 (Self-efficacy for drug use resistance)</b> self assessment of these participants’ ability to avoid drugs that we were able to combine with the game data using player_id. These data were gathered at the beginning of the study, 3 weeks, 6 weeks, 3 months, 6 months, 12 months, and 24 months.</Typography>
+        <Typography sx={{fontSize: 19}}>We also received data from an <b>S5 (Self-efficacy for drug use resistance)</b> self assessment of these participants’ ability to avoid drugs that we were able to combine with the game data using player_id. These data were gathered at the beginning of the study, 3 weeks, 6 weeks, 3 months, 6 months, 12 months, and 24 months.</Typography>
         <Box sx={{width: 80, height: 30}}/>
-        <Typography sx={{fontSize: 18}}>From this dataset, we investigated whether game data could be used as a predictive tool of drug resistance. This would help in the development of evidence-based assessment tools to identify and potentially intervene with kids who are struggling. We tried to identify variables within the data that could correlate with real-world decision-making (as measured by scores on the S5 assessment, with a score of 4 indicating low self-efficacy for drug use resistance and a score of 1 indicating high efficacy).</Typography>
+        <Typography sx={{fontSize: 19}}>From this dataset, we investigated whether game data could be used as a predictive tool of drug resistance. This would help in the development of evidence-based assessment tools to identify and potentially intervene with kids who are struggling. We tried to identify variables within the data that could correlate with real-world decision-making (as measured by scores on the S5 assessment, with a score of 4 indicating low self-efficacy for drug use resistance and a score of 1 indicating high efficacy).</Typography>
         <a id="introduction">
         <Box sx={{width: 80, height: 60}}/>
         <Typography align="center" sx={{fontSize: 45}}>
@@ -57,9 +57,9 @@ export default function App() {
         </a>
         <Typography  sx={{ mt: 4, mb: 4 }} color="text.secondary"></Typography>
         <Typography variant="h5">Our key question:</Typography> 
-        <Typography  sx={{ fontWeight: 'bold', fontSize: 21}}>Can we use game data as a predictive tool? → </Typography>
+        <Typography  sx={{ fontWeight: 'bold', fontSize: 22}}>Can we use game data as a predictive tool? → </Typography>
         <Typography  sx={{ mt: 3, mb: 2 }} color="text.secondary"></Typography>
-        <Typography sx={{fontSize: 18}}>This would help in development of evidence-based assessment tools to identify which kids are struggling. We attempted to identify variables within the data that could correlate with real-world decision-making (as measured by scores on the S5 assessment, with a score of 4 indicating low self-efficacy for drug use resistance and a score of 1 indicating high efficacy).</Typography>  
+        <Typography sx={{fontSize: 20}}>This would help in development of evidence-based assessment tools to identify which kids are struggling. We attempted to identify variables within the data that could correlate with real-world decision-making (as measured by scores on the S5 assessment, with a score of 4 indicating low self-efficacy for drug use resistance and a score of 1 indicating high efficacy).</Typography>  
         <a id="methodology">
         <Box sx={{width: 80, height: 70}}/>
         <Typography align="center" sx={{fontSize: 40}}>
@@ -67,6 +67,17 @@ export default function App() {
         </Typography>
         </a>
         <Box sx={{width: 80, height: 50}}/>
+        <Typography sx={{fontSize: 20}}> We first looked through our data to drop NAs in variables we thought could be significant. This let us see how many rows we had for each of these variables , including avatar_age, avatar_gender, and other variables.  We made separate datasets for each of these, selecting player_id and one or a few other variables so we could merge them together and with S5scores. </Typography>
+        <Box sx={{width: 80, height: 20}}/>
+        <a id="results">
+        <Box sx={{width: 80, height: 20}}/>
+        <ProTip />
+        <Typography align="center" sx={{fontSize: 40}}>
+          Results
+        </Typography>
+        </a>
+        <Box sx={{width: 80, height: 50}}/>
+
         <Grid container spacing={2} columns={16}>
         <Grid item xs={8}>
         <Container>
@@ -83,14 +94,7 @@ export default function App() {
         </Container>
         </Grid>
         </Grid>
-        <a id="results">
-        <Box sx={{width: 80, height: 30}}/>
-        <ProTip />
-        <Typography align="center" sx={{fontSize: 40}}>
-          Results
-        </Typography>
-        </a>
-        <Box sx={{width: 80, height: 50}}/>
+<Box sx={{width: 80, height: 50}}/>
 
         <Grid container spacing={2} columns={16}>
         <Grid item xs={9}>
@@ -124,6 +128,51 @@ export default function App() {
         </Grid>
         </Grid>
         <Box sx={{width: 80, height: 50}}/>
+        <Typography sx={{fontSize: 25}}>
+          Statistically Significant Priority Sense Minigame Findings
+        </Typography>
+        <Box sx={{width: 80, height: 20}}/>
+        <Typography sx={{fontSize: 18}}>Looking more closely at the Priority Sense minigame, we looked at how the frequency of priorities chosen were related to S5 scores. There was a negative correlation with higher percentages of “School” and “Health” chosen, while there was a positive correlation with higher percentages “Friends”, “Happiness”, “Family”, or “Money” chosen. Happiness was chosen as a priority most often, followed by Friends, School, Happiness, Family, then Money. Friends and School priorities had the lowest p values, with the p value of school being 0.000443591 and the p value of friends being 0.0238. </Typography>
+        <Box sx={{width: 80, height: 30}}/>
+        <Grid container rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 3 }}>
+  <Grid item xs={6}>
+    <Container>
+    <Iframe url="//plotly.com/~rebeccacombs/9.embed?height=300&link=false&logo=false&modebar=false" width="500" height="320"/>
+    </Container>
+  </Grid>
+  <Grid item xs={6}>
+    <Container>
+    <Iframe url="//plotly.com/~rebeccacombs/19.embed?height=300&link=false&logo=false&modebar=false" width="500" height="320"/>
+    </Container>
+  </Grid>
+</Grid>
+<Box sx={{width: 80, height: 30}}/>
+        <Grid container rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 3 }}>
+  <Grid item xs={6}>
+    <Container>
+    <Iframe url="//plotly.com/~rebeccacombs/15.embed?height=300&link=false&logo=false&modebar=false" width="500" height="320"/>
+    </Container>
+  </Grid>
+  <Grid item xs={6}>
+    <Container>
+    <Iframe url="//plotly.com/~rebeccacombs/13.embed?height=300&link=false&logo=false&modebar=false" width="500" height="320"/>
+    </Container>
+  </Grid>
+</Grid>
+<Box sx={{width: 80, height: 30}}/>
+        <Grid container rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 3 }}>
+  <Grid item xs={6}>
+    <Container>
+    <Iframe url="//plotly.com/~rebeccacombs/17.embed?height=300&link=false&logo=false&modebar=false" width="500" height="320"/>
+    </Container>
+  </Grid>
+  <Grid item xs={6}>
+    <Container>
+    <Iframe url="//plotly.com/~rebeccacombs/11.embed?height=300&link=false&logo=false&modebar=false" width="500" height="320"/>
+    </Container>
+  </Grid>
+</Grid>
+<Box sx={{width: 80, height: 100}}/>
         <Grid container spacing={2} columns={16}>
         <Grid item xs={8}>
         <Container>
@@ -135,9 +184,11 @@ export default function App() {
          <Typography align="center" sx={{fontSize: 20}}>The lack of variability in scores and general gameplay path may limit the usefulness of this game as both a predictive and behavior changing tool; one could imagine students understanding that certain decisions are reckless and dangerous for their health, and therefore making good choices in the game, but still engaging in those behaviors for reasons of curiosity, peer pressure, or optimism bias (where individuals underestimate the likelihood of negative outcomes happening to them when engaging in behavior they know to be risky for others). </Typography>
         </Container>
         </Grid>
+        <Box sx={{width: 80, height: 20}}/>
         </Grid>
+
         <a id="conclusion">
-        <Box sx={{width: 80, height: 100}}/>
+        <Box sx={{width: 80, height: 60}}/>
  
         <Typography align="center" sx={{fontSize: 40}}>
           Conclusion
