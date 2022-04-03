@@ -35,29 +35,33 @@ export default function App() {
         <Typography variant="h3" component="h1" textAlign="center" gutterBottom>
         <SailingOutlinedIcon sx={{ fontSize: 50 }}/> Team FishSwish DataFest 2022
         </Typography>
+        <a id="background">
         <ProTip />
         <Typography align="center" sx={{fontSize: 45}}>
           Background
         </Typography>
+        </a>
         <Box sx={{width: 80, height: 30}}/>
         <Typography sx={{fontSize: 18}}> Our data is collected from the <b>PlayForward: Elm City Stories</b> game, gathered from 166 participants across 6 weeks with participants playing the game for 60-75 mins twice weekly. The game was tested at 12 schools with primarily racial and ethnic minorities, 88 were boys, 78 were girls. 86 were 11-12 years old and 80 were 13-14. The data logs various in game interactions, including options chosen for minigames.</Typography>
         <Box sx={{width: 80, height: 30}}/>
         <Typography sx={{fontSize: 18}}>We also received data from an <b>S5 (Self-efficacy for drug use resistance)</b> self assessment of these participants’ ability to avoid drugs that we were able to combine with the game data using player_id. These data were gathered at the beginning of the study, 3 weeks, 6 weeks, 3 months, 6 months, 12 months, and 24 months.</Typography>
         <Box sx={{width: 80, height: 30}}/>
         <Typography sx={{fontSize: 18}}>From this dataset, we investigated whether game data could be used as a predictive tool of drug resistance. This would help in the development of evidence-based assessment tools to identify and potentially intervene with kids who are struggling. We tried to identify variables within the data that could correlate with real-world decision-making (as measured by scores on the S5 assessment, with a score of 4 indicating low self-efficacy for drug use resistance and a score of 1 indicating high efficacy).</Typography>
+        <a id="introduction">
         <Box sx={{width: 80, height: 60}}/>
         <Typography align="center" sx={{fontSize: 45}}>
           Introduction
         </Typography>
+        </a>
         <Typography  sx={{ mt: 4, mb: 4 }} color="text.secondary"></Typography>
         <Typography variant="h5">Our key question:</Typography> 
         <Typography  sx={{ fontWeight: 'bold', fontSize: 21}}>Can we use game data as a predictive tool? → </Typography>
         <Typography  sx={{ mt: 3, mb: 2 }} color="text.secondary"></Typography>
         <Typography sx={{fontSize: 18}}>This would help in development of evidence-based assessment tools to identify which kids are struggling. We attempted to identify variables within the data that could correlate with real-world decision-making (as measured by scores on the S5 assessment, with a score of 4 indicating low self-efficacy for drug use resistance and a score of 1 indicating high efficacy).</Typography>  
-        <a id="current-analysis">
+        <a id="methodology">
         <Box sx={{width: 80, height: 70}}/>
         <Typography align="center" sx={{fontSize: 40}}>
-          Our Current Analysis
+          Methodology
         </Typography>
         </a>
         <Box sx={{width: 80, height: 50}}/>
