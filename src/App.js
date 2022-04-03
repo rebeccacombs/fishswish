@@ -9,7 +9,7 @@ import AppBar from './components/AppBar';
 import Iframe from 'react-iframe'; 
 import Sheet from './data/sheet.png'; 
 import Sheet2 from './data/sheet2.png'; 
-import group_pic from './data/group_pic.png'; 
+import Winner from './data/winner.png'; 
 import SailingOutlinedIcon from '@mui/icons-material/SailingOutlined';
 import GitHubIcon from '@mui/icons-material/GitHub';
 
@@ -205,18 +205,30 @@ export default function App() {
         <Typography align="center" sx={{fontSize: 20}}>The lack of variability in scores and general gameplay path may limit the usefulness of this game as both a predictive and behavior changing tool; one could imagine students understanding that certain decisions are reckless and dangerous for their health, and therefore making good choices in the game, but still engaging in those behaviors for reasons of curiosity, peer pressure, or optimism bias (where individuals underestimate the likelihood of negative outcomes happening to them when engaging in behavior they know to be risky for others). </Typography>
         <Box sx={{width: 80, height: 40}}/>
         <Typography align="center" sx={{fontSize: 20}}>We also found the players’ recorded interactions with the minigames to be more useful, because in game decisions could vary more. From the priority sense minigame, it was significant that choosing school as a priority correlated with lower S5 scores, while choosing friends as a priority correlated with higher S5 scores. In People sense, looking at the accepted unsafe invitations is a significant predictor for S5 score. The data for know sense and refusal power should be further investigated for results. </Typography>
-        <Box sx={{width: 80, height: 60}}/>
-        <Typography align="center" sx={{fontSize: 17}}>Thank you from Team FishSwish!</Typography>
+        <Box sx={{width: 80, height: 100}}/>
+
+  <Grid container rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 3 }}>
+  <Grid item xs={6}>
+    <Container>
+    <Typography color="secondary" align="center" sx={{fontSize: 18}}>Thank you for the Best Visualization Award</Typography>
+    <Typography color="secondary" align="center" sx={{fontSize: 18}}> @ Duke DataFest 2022!</Typography>
+        <Typography align="center" sx={{fontSize: 17}}><i>- Team FishSwish</i></Typography>
         <Box sx={{width: 80, height: 10}}/>
         <Container align="center"> 
-        <Box align="center" component="img" sx={{height: 250,width: 380}} src={group_pic}/>
+        <Box align="center" component="img" sx={{height: 330,width: 270}} src={Winner}/>
         </Container>
-        <Box sx={{width: 80, height: 40}}/>
-        <Typography align="center" sx={{fontSize: 17}}><Link href="https://github.com/athenaayao/datafest2022"><GitHubIcon sx={{ fontSize: 17 }}/>{'  R Analysis Repository'}</Link></Typography>
-        <Box sx={{width: 80, height: 10}}/>
-        <Typography align="center" sx={{fontSize: 17}}><Link href="https://github.com/rebeccacombs/fishswish"><GitHubIcon sx={{ fontSize: 17 }}/>{'  Site Repository'}</Link></Typography>
-        <Box sx={{width: 80, height: 40}}/>
-        
+    </Container>
+  </Grid>
+  <Grid item xs={6}>
+    <Container align="center">
+    <Box sx={{width: 80, height: 170}}/>
+        <Typography align="center" sx={{fontSize: 19}}><Link href="https://github.com/athenaayao/datafest2022"><GitHubIcon sx={{ fontSize: 17 }}/>{'  R Analysis Repository'}</Link></Typography>
+        <Box sx={{width: 80, height: 30}}/>
+        <Typography align="center" sx={{fontSize: 19}}><Link href="https://github.com/rebeccacombs/fishswish"><GitHubIcon sx={{ fontSize: 17 }}/>{'  Site Repository'}</Link></Typography>
+    </Container>
+  </Grid>
+</Grid>
+<Box sx={{width: 80, height: 50}}/>
         <Copyright />
           </Box>
         </Container>
