@@ -9,6 +9,7 @@ import AppBar from './components/AppBar';
 import Iframe from 'react-iframe'; 
 import Sheet from './data/sheet.png'; 
 import Sheet2 from './data/sheet2.png'; 
+import group_pic from './data/group_pic.png'; 
 import SailingOutlinedIcon from '@mui/icons-material/SailingOutlined';
 import GitHubIcon from '@mui/icons-material/GitHub';
 
@@ -68,7 +69,9 @@ export default function App() {
         </Typography>
         </a>
         <Box sx={{width: 80, height: 50}}/>
-        <Typography sx={{fontSize: 20}}> We first looked through our data to drop NAs in variables we thought could be significant. This let us see how many rows we had for each of these variables , including avatar_age, avatar_gender, and other variables.  We made separate datasets for each of these, selecting player_id and one or a few other variables so we could merge them together and with S5scores. </Typography>
+        <Typography sx={{fontSize: 20}}> We conducted our statistical analysis using R, which allowed us to perform logistic regression analysis, create plots of the data, and conduct hypothesis testing to identify variables in the logs dataset that could correlate with significant differences in drug use efficacy, as measured by S5 scores.</Typography>
+        <Box sx={{width: 80, height: 20}}/>
+        <Typography sx={{fontSize: 20}}> We first looked through our data to drop NAs in variables we thought could be significant. This let us see how many rows we had for each of these variables , including avatar_age, avatar_gender, and other variables.  We made separate datasets for each of these, selecting player_id and one or a few other variables so we could merge them together and with S5scores.</Typography>
         <Box sx={{width: 80, height: 20}}/>
         <a id="results">
         <Box sx={{width: 80, height: 20}}/>
@@ -217,7 +220,13 @@ export default function App() {
         <Typography align="center" sx={{fontSize: 20}}>The lack of variability in scores and general gameplay path may limit the usefulness of this game as both a predictive and behavior changing tool; one could imagine students understanding that certain decisions are reckless and dangerous for their health, and therefore making good choices in the game, but still engaging in those behaviors for reasons of curiosity, peer pressure, or optimism bias (where individuals underestimate the likelihood of negative outcomes happening to them when engaging in behavior they know to be risky for others). </Typography>
         <Box sx={{width: 80, height: 40}}/>
         <Typography align="center" sx={{fontSize: 20}}>We also found the players’ recorded interactions with the minigames to be more useful, because in game decisions could vary more. From the priority sense minigame, it was significant that choosing school as a priority correlated with lower S5 scores, while choosing friends as a priority correlated with higher S5 scores. In People sense, looking at the accepted unsafe invitations is a significant predictor for S5 score. The data for know sense and refusal power should be further investigated for results. </Typography>
-        <Box sx={{width: 80, height: 70}}/>
+        <Box sx={{width: 80, height: 60}}/>
+        <Typography align="center" sx={{fontSize: 17}}>Thank you from Team FishSwish!</Typography>
+        <Box sx={{width: 80, height: 10}}/>
+        <Container align="center"> 
+        <Box align="center" component="img" sx={{height: 250,width: 380}} src={group_pic}/>
+        </Container>
+        <Box sx={{width: 80, height: 40}}/>
         <Typography align="center" sx={{fontSize: 17}}><Link href="https://github.com/athenaayao/datafest2022"><GitHubIcon sx={{ fontSize: 17 }}/>{'  R Analysis Repository'}</Link></Typography>
         <Box sx={{width: 80, height: 10}}/>
         <Typography align="center" sx={{fontSize: 17}}><Link href="https://github.com/rebeccacombs/fishswish"><GitHubIcon sx={{ fontSize: 17 }}/>{'  Site Repository'}</Link></Typography>
