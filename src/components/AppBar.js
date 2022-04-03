@@ -14,7 +14,7 @@ import MenuItem from '@mui/material/MenuItem';
 import Link from '@mui/material/Link'; 
 import SailingOutlinedIcon from '@mui/icons-material/SailingOutlined';
 
-const pages = [<Link href='/#narrative' underline="none" color="inherit">Narrative</Link>, 'Elementary Findings', 'Novel Discoveries'];
+const pages = [<Link href='/#current-analysis' underline="none" color="inherit">Current Analysis</Link>, 'Elementary Findings', 'Novel Discoveries'];
 
 const ResponsiveAppBar = () => {
   const [anchorElNav, setAnchorElNav] = React.useState(null);

@@ -6,7 +6,8 @@ import Link from '@mui/material/Link';
 import Grid from '@mui/material/Grid';
 import ProTip from './components/ProTip';
 import AppBar from './components/AppBar';
-import BarChart from './BarChart';
+import Iframe from 'react-iframe'; 
+import Sheet from './data/sheet.png'; 
 
 
 function Copyright() {
@@ -21,38 +22,6 @@ function Copyright() {
   );
 }
 
-const data = [
-  {year: 1980, efficiency: 24.3, sales: 8949000},
-  {year: 1985, efficiency: 27.6, sales: 10979000},
-  {year: 1990, efficiency: 28, sales: 9303000},
-  {year: 1991, efficiency: 28.4, sales: 8185000},
-  {year: 1992, efficiency: 27.9, sales: 8213000},
-  {year: 1993, efficiency: 28.4, sales: 8518000},
-  {year: 1994, efficiency: 28.3, sales: 8991000},
-  {year: 1995, efficiency: 28.6, sales: 8620000},
-  {year: 1996, efficiency: 28.5, sales: 8479000},
-  {year: 1997, efficiency: 28.7, sales: 8217000},
-  {year: 1998, efficiency: 28.8, sales: 8085000},
-  {year: 1999, efficiency: 28.3, sales: 8638000},
-  {year: 2000, efficiency: 28.5, sales: 8778000},
-  {year: 2001, efficiency: 28.8, sales: 8352000},
-  {year: 2002, efficiency: 29, sales: 8042000},
-  {year: 2003, efficiency: 29.5, sales: 7556000},
-  {year: 2004, efficiency: 29.5, sales: 7483000},
-  {year: 2005, efficiency: 30.3, sales: 7660000},
-  {year: 2006, efficiency: 30.1, sales: 7762000},
-  {year: 2007, efficiency: 31.2, sales: 7562000},
-  {year: 2008, efficiency: 31.5, sales: 6769000},
-  {year: 2009, efficiency: 32.9, sales: 5402000},
-  {year: 2010, efficiency: 33.9, sales: 5636000},
-  {year: 2011, efficiency: 33.1, sales: 6093000},
-  {year: 2012, efficiency: 35.3, sales: 7245000},
-  {year: 2013, efficiency: 36.4, sales: 7586000},
-  {year: 2014, efficiency: 36.5, sales: 7708000},
-  {year: 2015, efficiency: 37.2, sales: 7517000},
-  {year: 2016, efficiency: 37.7, sales: 6873000},
-  {year: 2017, efficiency: 39.4, sales: 6081000},
-]
 
 export default function App() {
   return (
@@ -66,41 +35,69 @@ export default function App() {
           Team FishSwish DataFest 2022
         </Typography>
         <ProTip />
-        <Typography variant="h3" component="h1" noWrap gutterBottom>
-          Introduction: 
+        <Typography align="center" sx={{fontSize: 45}}>
+          Background
         </Typography>
-        <ProTip />
+        <Box sx={{width: 80, height: 30}}/>
+        <Typography sx={{fontSize: 18}}> Our data is collected from the <b>PlayForward: Elm City Stories</b> game, gathered from 166 participants across 6 weeks with participants playing the game for 60-75 mins twice weekly. The game was tested at 12 schools with primarily racial and ethnic minorities, 88 were boys, 78 were girls. 86 were 11-12 years old and 80 were 13-14. The data logs various in game interactions, including options chosen for minigames.</Typography>
+        <Box sx={{width: 80, height: 30}}/>
+        <Typography sx={{fontSize: 18}}>We also received data from an <b>S5 (Self-efficacy for drug use resistance)</b> self assessment of these participants’ ability to avoid drugs that we were able to combine with the game data using player_id. These data were gathered at the beginning of the study, 3 weeks, 6 weeks, 3 months, 6 months, 12 months, and 24 months.</Typography>
+        <Box sx={{width: 80, height: 30}}/>
+        <Typography sx={{fontSize: 18}}>From this dataset, we investigated whether game data could be used as a predictive tool of drug resistance. This would help in the development of evidence-based assessment tools to identify and potentially intervene with kids who are struggling. We tried to identify variables within the data that could correlate with real-world decision-making (as measured by scores on the S5 assessment, with a score of 4 indicating low self-efficacy for drug use resistance and a score of 1 indicating high efficacy).</Typography>
+        <Box sx={{width: 80, height: 60}}/>
+        <Typography align="center" sx={{fontSize: 45}}>
+          Introduction
+        </Typography>
+        <Typography  sx={{ mt: 4, mb: 4 }} color="text.secondary"></Typography>
+        <Typography variant="h5">Our key question:</Typography> 
+        <Typography  sx={{ fontWeight: 'bold', fontSize: 21}}>Can we use game data as a predictive tool? → </Typography>
+        <Typography  sx={{ mt: 3, mb: 2 }} color="text.secondary"></Typography>
+        <Typography sx={{fontSize: 18}}>This would help in development of evidence-based assessment tools to identify which kids are struggling. We attempted to identify variables within the data that could correlate with real-world decision-making (as measured by scores on the S5 assessment, with a score of 4 indicating low self-efficacy for drug use resistance and a score of 1 indicating high efficacy).</Typography>  
+        <a id="current-analysis">
+        <Box sx={{width: 80, height: 70}}/>
+        <Typography align="center" sx={{fontSize: 40}}>
+          Our Current Analysis
+        </Typography>
+        </a>
+        <Box sx={{width: 80, height: 50}}/>
         <Grid container spacing={2} columns={16}>
         <Grid item xs={8}>
         <Container>
-       <Typography variant="h5">Things to consider:</Typography> 
-       <Typography>1. Gender (avatar gender)</Typography>  
-        <Typography>2. Forgetting over time (highest means probably in weak 12)</Typography>
-        <Typography>3. Bar plots instead of scatterplots for the num_interactions analysis</Typography>
-        <Typography>4. Lasso in R</Typography>
+       <Typography sx={{fontWeight: 'bold', fontSize: 20}}>We made a scatterplot of total interactions vs mean score and added a line of best fit.</Typography>
+       <Typography  sx={{ mt: 3, mb: 2 }} color="text.secondary"></Typography>
+       <Typography sx={{fontSize: 18}}>The line had a slight negative slope, suggesting that more engagement per session might lead to a mild decrease in score (and therefore decrease in susceptibility to drug-related peer pressure). Much of the data was clustered on the left half of the graph, however, and the slope was very slight, so this may not be of much significance. </Typography> 
+       <Typography  sx={{ mt: 1, mb: 2 }} color="text.secondary"></Typography>
+       <Typography sx={{fontSize: 18}}>This suggests that there was more variation among the scores of players who played much more or less than others, while players who engaged with the game at a medium amount tended to cluster around the same score. </Typography>
         </Container>
          </Grid>
          <Grid item xs={8}>
          <Container>
-       <Typography variant="h5">Sections to cover:</Typography> 
-       <Typography>1. Intro (significance, general research question, data background)</Typography>  
-        <Typography>2. Methodology (explanation of steps in cleaning and the code) </Typography>
-        <Typography>3. Conclusion</Typography>
+         <Iframe url="//plotly.com/~rebeccacombs/1.embed?height=500&link=false&logo=false&modebar=false" width="600" height="510"/>
         </Container>
         </Grid>
         </Grid>
+        <Box sx={{width: 80, height: 30}}/>
         <ProTip />
-        <Box sx={{
-        width: 100,
-        height: 100
-      }}/>
-        <a id="narrative">
-        <Typography variant="h6" component="h1" noWrap gutterBottom>
-          Here is our current analysis: 
-        </Typography>
-        <BarChart data={data}/>
-        </a>
-        <ProTip />
+        <Grid container spacing={2} columns={16}>
+        <Grid item xs={9}>
+        <Container>
+        <Iframe url="//plotly.com/~rebeccacombs/3.embed?height=450&link=false&logo=false&modebar=false" width="600" height="460"/>
+        </Container>
+         </Grid>
+         <Grid item xs={7}>
+         <Container sx={{ mt: 6, mb: 6 }}>
+         <Typography sx={{fontSize: 19}}>When we used an interaction effects model to account for the effects of player gender (under the assumption that the avatar gender selected by the player is an accurate reflection of their gender identity IRL), we found that the relationship between total number of ingame interactions and mean S5 score. </Typography>
+         <Box sx={{width: 10, height: 20}}/>
+         <Box component="img" sx={{height: 100,width: 460}} src={Sheet}/>
+         <Typography>Note that there is a large standard error, p-values are still too small to be significant under alpha = 0.05). </Typography>
+        </Container>
+        </Grid>
+        </Grid>
+        <Box sx={{width: 80, height: 60}}/>
+        <Typography align="center" sx={{fontSize: 20}}>Overall, this suggests that interacting with the game more, meaning with more interactions and more choices, correlates slightly with a higher score, indicating a higher likelihood of taking drugs. Given the structure of the game, which forces players to make poor choices and then asks them to go back and fix those choices, this finding makes sense; if it takes a player longer to correct his decisions, he may not entirely understand whether or why that is a bad decision and how to correct it. </Typography>
+        <Box sx={{width: 80, height: 30}}/>
+        <Typography align="center" sx={{fontSize: 20}}>The lack of variability in scores and general gameplay path may limit the usefulness of this game as both a predictive and behavior changing tool; one could imagine students understanding that certain decisions are reckless and dangerous for their health, and therefore making good choices in the game, but still engaging in those behaviors for reasons of curiosity, peer pressure, or optimism bias (where individuals underestimate the likelihood of negative outcomes happening to them when engaging in behavior they know to be risky for others). </Typography>
+        <Box sx={{width: 80, height: 60}}/>
         <Copyright />
           </Box>
         </Container>
