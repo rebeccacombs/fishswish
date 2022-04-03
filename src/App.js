@@ -8,6 +8,7 @@ import ProTip from './components/ProTip';
 import AppBar from './components/AppBar';
 import Iframe from 'react-iframe'; 
 import Sheet from './data/sheet.png'; 
+import Sheet2 from './data/sheet2.png'; 
 import SailingOutlinedIcon from '@mui/icons-material/SailingOutlined';
 import GitHubIcon from '@mui/icons-material/GitHub';
 
@@ -132,7 +133,21 @@ export default function App() {
           Statistically Significant Priority Sense Minigame Findings
         </Typography>
         <Box sx={{width: 80, height: 20}}/>
-        <Typography sx={{fontSize: 18}}>Looking more closely at the Priority Sense minigame, we looked at how the frequency of priorities chosen were related to S5 scores. There was a negative correlation with higher percentages of “School” and “Health” chosen, while there was a positive correlation with higher percentages “Friends”, “Happiness”, “Family”, or “Money” chosen. Happiness was chosen as a priority most often, followed by Friends, School, Happiness, Family, then Money. Friends and School priorities had the lowest p values, with the p value of school being 0.000443591 and the p value of friends being 0.0238. </Typography>
+
+        <Grid container rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 3 }}>
+  <Grid item xs={6}>
+    <Container>
+    <Typography sx={{fontSize: 18}}>Looking more closely at the Priority Sense minigame, we looked at how the frequency of priorities chosen were related to S5 scores. There was a negative correlation with higher percentages of “School” and “Health” chosen, while there was a positive correlation with higher percentages “Friends”, “Happiness”, “Family”, or “Money” chosen. Happiness was chosen as a priority most often, followed by Friends, School, Happiness, Family, then Money. Friends and School priorities had the lowest p values, with the p value of school being 0.000443591 and the p value of friends being 0.0238. </Typography>
+    </Container>
+  </Grid>
+  <Grid item xs={6}>
+    <Container>
+    <Box sx={{width: 80, height: 35}}/>
+    <Box component="img" sx={{height: 160,width: 470}} src={Sheet2}/>
+    </Container>
+  </Grid>
+</Grid>
+       
         <Box sx={{width: 80, height: 30}}/>
         <Grid container rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 3 }}>
   <Grid item xs={6}>
