@@ -12,7 +12,7 @@ import MenuItem from '@mui/material/MenuItem';
 import Link from '@mui/material/Link'; 
 import SailingOutlinedIcon from '@mui/icons-material/SailingOutlined';
 
-const pages = [<Link href='/#background' underline="none" color="inherit">Background</Link>, <Link href='/#introduction' underline="none" color="inherit">Introduction</Link>, <Link href='/#methodology' underline="none" color="inherit">Methodology</Link>];
+const pages = [<Link href='/#background' underline="none" color="inherit">Background</Link>, <Link href='/#introduction' underline="none" color="inherit">Introduction</Link>, <Link href='/#methodology' underline="none" color="inherit">Methodology</Link>, <Link href='/#results' underline="none" color="inherit">Results</Link>, <Link href='/#conclusion' underline="none" color="inherit">Conclusion</Link>];
 
 const ResponsiveAppBar = () => {
   const [anchorElNav, setAnchorElNav] = React.useState(null);

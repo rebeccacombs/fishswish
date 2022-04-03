@@ -41,8 +41,9 @@ export default function App() {
         <Typography align="center" sx={{fontSize: 45}}>
           Background
         </Typography>
-        </a>
+        
         <Box sx={{width: 80, height: 30}}/>
+        </a>
         <Typography sx={{fontSize: 18}}> Our data is collected from the <b>PlayForward: Elm City Stories</b> game, gathered from 166 participants across 6 weeks with participants playing the game for 60-75 mins twice weekly. The game was tested at 12 schools with primarily racial and ethnic minorities, 88 were boys, 78 were girls. 86 were 11-12 years old and 80 were 13-14. The data logs various in game interactions, including options chosen for minigames.</Typography>
         <Box sx={{width: 80, height: 30}}/>
         <Typography sx={{fontSize: 18}}>We also received data from an <b>S5 (Self-efficacy for drug use resistance)</b> self assessment of these participants’ ability to avoid drugs that we were able to combine with the game data using player_id. These data were gathered at the beginning of the study, 3 weeks, 6 weeks, 3 months, 6 months, 12 months, and 24 months.</Typography>
@@ -82,8 +83,15 @@ export default function App() {
         </Container>
         </Grid>
         </Grid>
+        <a id="results">
         <Box sx={{width: 80, height: 30}}/>
         <ProTip />
+        <Typography align="center" sx={{fontSize: 40}}>
+          Results
+        </Typography>
+        </a>
+        <Box sx={{width: 80, height: 50}}/>
+
         <Grid container spacing={2} columns={16}>
         <Grid item xs={9}>
         <Container>
@@ -91,7 +99,7 @@ export default function App() {
         </Container>
          </Grid>
          <Grid item xs={7}>
-         <Container sx={{ mt: 6, mb: 6 }}>
+         <Container>
          <Typography sx={{fontSize: 19}}>When we used an interaction effects model to account for the effects of player gender (under the assumption that the avatar gender selected by the player is an accurate reflection of their gender identity IRL), we found that the relationship between total number of in-game interactions and mean S5 score. </Typography>
          <Box sx={{width: 10, height: 20}}/>
          <Box component="img" sx={{height: 100,width: 460}} src={Sheet}/>
@@ -99,7 +107,9 @@ export default function App() {
         </Container>
         </Grid>
         </Grid>
-        <Box sx={{width: 80, height: 50}}/>
+
+        <Box sx={{width: 80, height: 100}}/>
+
         <Grid container spacing={2} columns={16}>
         <Grid item xs={8}>
         <Container>
@@ -113,12 +123,35 @@ export default function App() {
         </Container>
         </Grid>
         </Grid>
-
-        <Box sx={{width: 80, height: 60}}/>
-        <Typography align="center" sx={{fontSize: 20}}>Overall, this suggests that interacting with the game more, meaning with more interactions and more choices, correlates slightly with a higher score, indicating a higher likelihood of taking drugs. Given the structure of the game, which forces players to make poor choices and then asks them to go back and fix those choices, this finding makes sense; if it takes a player longer to correct his decisions, he may not entirely understand whether or why that is a bad decision and how to correct it. </Typography>
+        <Box sx={{width: 80, height: 50}}/>
+        <Grid container spacing={2} columns={16}>
+        <Grid item xs={8}>
+        <Container>
+       <Typography align="center" sx={{fontSize: 20}}>Overall, this suggests that interacting with the game more, meaning with more interactions and more choices, correlates slightly with a higher score, indicating a higher likelihood of taking drugs. Given the structure of the game, which forces players to make poor choices and then asks them to go back and fix those choices, this finding makes sense; if it takes a player longer to correct his decisions, he may not entirely understand whether or why that is a bad decision and how to correct it. </Typography>
+        </Container>
+         </Grid>
+         <Grid item xs={8}>
+         <Container>
+         <Typography align="center" sx={{fontSize: 20}}>The lack of variability in scores and general gameplay path may limit the usefulness of this game as both a predictive and behavior changing tool; one could imagine students understanding that certain decisions are reckless and dangerous for their health, and therefore making good choices in the game, but still engaging in those behaviors for reasons of curiosity, peer pressure, or optimism bias (where individuals underestimate the likelihood of negative outcomes happening to them when engaging in behavior they know to be risky for others). </Typography>
+        </Container>
+        </Grid>
+        </Grid>
+        <a id="conclusion">
+        <Box sx={{width: 80, height: 100}}/>
+ 
+        <Typography align="center" sx={{fontSize: 40}}>
+          Conclusion
+        </Typography>
+        <Box sx={{width: 80, height: 50}}/>
+        </a>
+        <Typography align="center" sx={{fontSize: 21}}>In one study, 31% in the control group versus 12% in the intervention group had initiated sexual activity at 1 year. In another done on those abstinent at baseline, 14% of the group that hadn’t played the game versus 4% in the intervention group reported initiating sex at 5 months. National data indicates that approximately <b>7% of youth report engaging in sexual activity before age 13.</b> </Typography>
         <Box sx={{width: 80, height: 30}}/>
+        <Typography align="center" sx={{fontSize: 20}}>Overall, our results suggest that interacting with the game more, meaning with more interactions and more choices, correlates slightly with a higher score, indicating a higher likelihood of taking drugs. Given the structure of the game, which forces players to make poor choices and then asks them to go back and fix those choices, this finding makes sense; if it takes a player longer to correct their decisions, they may not entirely understand whether or why that is a bad decision and how to correct it. </Typography>
+        <Box sx={{width: 80, height: 40}}/>
         <Typography align="center" sx={{fontSize: 20}}>The lack of variability in scores and general gameplay path may limit the usefulness of this game as both a predictive and behavior changing tool; one could imagine students understanding that certain decisions are reckless and dangerous for their health, and therefore making good choices in the game, but still engaging in those behaviors for reasons of curiosity, peer pressure, or optimism bias (where individuals underestimate the likelihood of negative outcomes happening to them when engaging in behavior they know to be risky for others). </Typography>
         <Box sx={{width: 80, height: 40}}/>
+        <Typography align="center" sx={{fontSize: 20}}>We also found the players’ recorded interactions with the minigames to be more useful, because in game decisions could vary more. From the priority sense minigame, it was significant that choosing school as a priority correlated with lower S5 scores, while choosing friends as a priority correlated with higher S5 scores. In People sense, looking at the accepted unsafe invitations is a significant predictor for S5 score. The data for know sense and refusal power should be further investigated for results. </Typography>
+        <Box sx={{width: 80, height: 70}}/>
         <Typography align="center" sx={{fontSize: 17}}><Link href="https://github.com/athenaayao/datafest2022"><GitHubIcon sx={{ fontSize: 17 }}/>{'  R Analysis Repository'}</Link></Typography>
         <Box sx={{width: 80, height: 10}}/>
         <Typography align="center" sx={{fontSize: 17}}><Link href="https://github.com/rebeccacombs/fishswish"><GitHubIcon sx={{ fontSize: 17 }}/>{'  Site Repository'}</Link></Typography>
