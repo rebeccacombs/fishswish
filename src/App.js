@@ -8,16 +8,17 @@ import ProTip from './components/ProTip';
 import AppBar from './components/AppBar';
 import Iframe from 'react-iframe'; 
 import Sheet from './data/sheet.png'; 
+import SailingOutlinedIcon from '@mui/icons-material/SailingOutlined';
 
 
 function Copyright() {
   return (
     <Typography variant="body2" color="text.secondary" align="center">
       {'Copyright © '}
-      <Link color="inherit" href="https://mui.com/">
+      <Link color="inherit" href="https://www2.stat.duke.edu/datafest/">
         FishSwish & Duke DataFest
       </Link>{' '}
-      {new Date().getFullYear()}.
+      {new Date().getFullYear()}. <SailingOutlinedIcon sx={{ fontSize: 13 }}/>
     </Typography>
   );
 }
@@ -32,7 +33,7 @@ export default function App() {
         <Container maxWidth="lg">
           <Box sx={{ my: 6 }}>
         <Typography variant="h3" component="h1" textAlign="center" gutterBottom>
-          Team FishSwish DataFest 2022
+        <SailingOutlinedIcon sx={{ fontSize: 50 }}/> Team FishSwish DataFest 2022
         </Typography>
         <ProTip />
         <Typography align="center" sx={{fontSize: 45}}>
