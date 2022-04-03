@@ -94,7 +94,7 @@ export default function App() {
          </Grid>
          <Grid item xs={8}>
          <Container>
-         <Iframe url="//plotly.com/~rebeccacombs/7.embed?height=500&link=false&logo=false&modebar=false" width="600" height="510"/>
+         <Iframe url="//plotly.com/~rebeccacombs/1.embed?height=500&link=false&logo=false&modebar=false" width="600" height="510"/>
         </Container>
         </Grid>
         </Grid>
@@ -116,21 +116,6 @@ export default function App() {
         </Grid>
         </Grid>
 
-        <Box sx={{width: 80, height: 100}}/>
-
-        <Grid container spacing={2} columns={16}>
-        <Grid item xs={8}>
-        <Container>
-       <Typography  sx={{ mt: 1, mb: 2 }} color="text.secondary"></Typography>
-       <Typography sx={{fontSize: 18}}>We added the number of times a player made an aspirational choice to the data set and created another scatterplot with a line of best fit, which showed a slight positive correlation between making more choices and having a better score (or being less resistant to drug-related peer pressure).  </Typography>
-        </Container>
-         </Grid>
-         <Grid item xs={8}>
-         <Container>
-         <Iframe url="//plotly.com/~rebeccacombs/5.embed?height=500&link=false&logo=false&modebar=false" width="600" height="510"/>
-        </Container>
-        </Grid>
-        </Grid>
         <Box sx={{width: 80, height: 50}}/>
         <Typography sx={{fontSize: 25}}>
           Statistically Significant Priority Sense Minigame Findings
