@@ -9,6 +9,7 @@ import AppBar from './components/AppBar';
 import Iframe from 'react-iframe'; 
 import Sheet from './data/sheet.png'; 
 import SailingOutlinedIcon from '@mui/icons-material/SailingOutlined';
+import GitHubIcon from '@mui/icons-material/GitHub';
 
 
 function Copyright() {
@@ -102,7 +103,11 @@ export default function App() {
         <Typography align="center" sx={{fontSize: 20}}>Overall, this suggests that interacting with the game more, meaning with more interactions and more choices, correlates slightly with a higher score, indicating a higher likelihood of taking drugs. Given the structure of the game, which forces players to make poor choices and then asks them to go back and fix those choices, this finding makes sense; if it takes a player longer to correct his decisions, he may not entirely understand whether or why that is a bad decision and how to correct it. </Typography>
         <Box sx={{width: 80, height: 30}}/>
         <Typography align="center" sx={{fontSize: 20}}>The lack of variability in scores and general gameplay path may limit the usefulness of this game as both a predictive and behavior changing tool; one could imagine students understanding that certain decisions are reckless and dangerous for their health, and therefore making good choices in the game, but still engaging in those behaviors for reasons of curiosity, peer pressure, or optimism bias (where individuals underestimate the likelihood of negative outcomes happening to them when engaging in behavior they know to be risky for others). </Typography>
-        <Box sx={{width: 80, height: 60}}/>
+        <Box sx={{width: 80, height: 40}}/>
+        <Typography align="center" sx={{fontSize: 17}}><Link href="https://github.com/athenaayao/datafest2022"><GitHubIcon sx={{ fontSize: 17 }}/>{'  R Analysis Repository'}</Link></Typography>
+        <Box sx={{width: 80, height: 10}}/>
+        <Typography align="center" sx={{fontSize: 17}}><Link href="https://github.com/rebeccacombs/fishswish"><GitHubIcon sx={{ fontSize: 17 }}/>{'  Site Repository'}</Link></Typography>
+        <Box sx={{width: 80, height: 40}}/>
         <Copyright />
           </Box>
         </Container>
